@@ -1,0 +1,50 @@
+
+
+    [g]...
+     g           :      "git" 
+     ga          :      "git add -v " 
+     gb          :      "git branch " 
+     gc          :      "git commit -m " 
+     gca         :      "git commit -a --amend --no-edit" 
+     gco         :      "git checkout " 
+     gcob        :      "git checkout -b " 
+     gm          :      'git merge' 
+     gp          :      "git push" 
+     gpu         :      "git push --set-upstream origin " 
+     gpull       :      "git pull" 
+     gs          :      "git status -s -b" 
+
+    [h]...
+     h           :      "gh " 
+     hi          :      'echo "hello world $PWD"' 
+     hrcl        :      'gh repo clone' 
+     hrcr        :      'gh repo create' 
+     hrl         :      'gh repo list -L 100' 
+
+    [k]...
+     kdry        :      "see dry run output for any ki-spread command. " cmd 
+     ki          :      "show this generated help / kipower any command. " cmd 
+     kin         :      "new ki command " 
+     kit         :      "ki minimalist test runner " cmd 
+     kiu         :      "update ki commands " 
+     klog        :      "log of all ki commands ran. " 
+
+    [l]...
+     l           :      "ls -1 --color" 
+
+    [n]...
+     n           :      "npm " 
+     nr          :      "npm run" 
+
+    [o]...
+     o           :      "least typing browsing ever" 
+     ocal        :      "google calendar event fast" 
+     ochess      :      "open lichess for analysis, puzzles then new game in order to improve." 
+     omap        :      "open google maps directions from/to" 
+
+    [p]...
+     pn          :      "pnpm" 
+     pnr         :      "pnpm run" 
+
+    [y]...
+     y           :      "yarn" 

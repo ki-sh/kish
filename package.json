@@ -1,0 +1,46 @@
+{
+  "name": "kish",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "kit",
+    "uninstall": "rm -rf ~/.kish",
+    "kiu": "./node_modules/kish-core/src/install.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ki-sh/kish.git"
+  },
+  "keywords": [
+    "shortcut",
+    "short",
+    "tasks",
+    "shell",
+    "\"oh",
+    "my",
+    "zsh\"",
+    "mono",
+    "monorepo",
+    "vscode",
+    "workspaces",
+    "automation",
+    "time-saving",
+    "flow",
+    "kaizen",
+    "ki",
+    "zen"
+  ],
+  "author": "Hennry Kemp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ticaboo/kish/issues"
+  },
+  "homepage": "https://github.com/ticaboo/kish#readme",
+  "dependencies": {
+    "kishcore": "^1.0.0"
+  }
+}
