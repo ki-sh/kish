@@ -9,7 +9,7 @@
   "scripts": {
     "test": "kit",
     "uninstall": "rm -rf ~/.kish",
-    "kiu": "./node_modules/kish-core/src/install.sh"
+    "kiu": "./node_modules/kishcore/src/install.sh"
   },
   "repository": {
     "type": "git",
