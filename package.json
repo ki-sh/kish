@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "kit",
+    "test": "$HOME/.kish/kit.sh aliases",
     "uninstall": "rm -rf ~/.kish",
     "kiu": "./node_modules/kishcore/src/install.sh"
   },

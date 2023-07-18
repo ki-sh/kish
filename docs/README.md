@@ -1,9 +1,8 @@
 # KI sh <a href=https://en.wikipedia.org/wiki/Qi > き </a>
 
-* Easily create/customise/manage command line shortcuts.
-* Superpowered! Execute across child directories.
-* Standardise shortcuts across organisation.
-* portable pure shell script, zero dependencies.
+click 'Use this template' button on this page.
+ DO NOT NPM I KISHCORE - except from kish templated repo.
+
 
 ```
             .,ad88888888baa,
@@ -26,14 +25,21 @@
          ""88888888888888888P"     
               """"""""""""
 ```
-## Raison For Being
-Better flow Ki’s API philosophy is simple. Simplify above all - make every API less key strokes.
-We are not trying to mimic or replace gui API’s, rather to supplement and simplify where
-It gives the most benefit. It is a hybrid approach.
+
+* Easily create/customise/manage command line shortcuts.
+* Never loose your shell aliases/easily share between devices. Save in your own repo (from <a href=https://github.com/ticaboo/kish >Template</a>)
+* Never have to type cd, or its evil twin cd .. again!
+* Zero dependencies. Simple to use test framework (KIT)
+* Ubiqutous v3 portable pure shell script.
+* Comes with very useful example scripts:
+  * ocal : fast easy human cli for creating calendar events.
+  * omap : open maps with location or directions
+
 
 
 ## Install
-click Use this template button on  <a href=https://github.com/ticaboo/kish >this page</a>
+click Use this template button on  <a href=https://github.com/ticaboo/kish >this page</a>.
+Then clone your repo and:
 ```
 cd kish
 npm i
@@ -43,41 +49,23 @@ source ~/.zshrc # or restart terminal
 ki
 ```
 
-$> ki. shows the help generated from your aliased commands.
-kin runs a wizzard to create a new command.
+$> ki shows the help generated from your aliased commands.
+$> kiu updates changes to your aliases. Note can run from anywhere.
+$> kin runs a wizzard to create a new command.
 
-try it out to get familiar:
+Please Star the <a href="https://github.com/ki-sh/kishcore"> kishcore repo </a> to be alerted to
+core shared updates. (This separation enables shared enhancements as well as your own source control over your own scripts/aliases.)
 
-```
-$> kin
-Enter command name: foo
-Enter what command executes:  echo 'foo' 
-Enter applicable:  (just return (none))
-Does this command enquire/operate on existing folders/files? y
-
-kiu
-source ~/.zshrc (if making new command need to do this)
-```
 
 After first install, ki, kin, kiu can be run from anywhere, so you dont have to 
-cd kish to work with it.
+cd into kish. 
 
-Have a look at the foo.sh script that was created. You can easily code the scripts,
-easy to hack all the scripts to your requirements.
+Congratulations, you are on the flowfull path of never using cd .. again!
 
-to remove foo: kix foo.sh
+Here is a video showing the features of ki, with an example of one way of using it
+in a polyrepo scenario:
 
-try hacking a command- create a file: kish/aliases/ge.sh
-```
- st="ge"
- cmd="ga gc $1 push"
-~/.kish/ga.sh && ~/.kish/gc.sh "$@" && ~/.kish/push.sh  
 
-kiu
-source ~/.zshrc
-#this will add, commit, push on any child repos - so careful
-ge adds-all-commits-this-message-pushes-all-on-all-child-repos-sweet
-```
 
 ## saves you a ton of typing, ramps up flow:
 
@@ -105,81 +93,18 @@ ge adds-all-commits-this-message-pushes-all-on-all-child-repos-sweet
 - No dependencies. - pure shell scripts.
 - Useful for any language, version control, packaging system.
 
-But its more than just about saving keystrokes. The long commands cause mental impedence. You will quickly find what were chores before become second nature flow. And flow matters.
+But its more than just about saving keystrokes. The long commands cause mental impedence. Let alone cd/cd ../..etc. You will quickly find what were chores before become second nature flow. And flow matters. 
 
-Cli designed for mono/hybrid/poly repos. By default every command runs across multiple targets.
+ki powered commands work thus:
+ki anycommand anydirectores anyfiles anything_else_are_args_to_the_command.
+ki visits into the directories given, runs the command and comes back out. Simple really. Why did we never have this before?!
+The order of files args commands does not matter.
 
+Cli designed especially for mono/hybrid/poly repos. 
 
-## Execute across child directories at once.
+## Roadmap
 
-By default any ki shortcut will execute in every first child directory:
-```
-/top
-    /apps
-    /packages
-
-$> l 
-
-./apps:
-    acme
-    ozcorp
-    skynet
-    wayne
-
-./packages:
-    middleware
-    services
-    uicomponents
-```
-dot or trialing dot targets a single directory:
-```
-$> l .
-    apps
-    packages
-
-gs packages 
--executes for all child dirs of packages.
-gs packages/uicomponents/. 
--executes only for uicomponents
-```
-This truey is an amazing super power. Inspired by monorepo tools.
-For one thing it means you very rarely use cd, and it's evil twin cd ../.. etc.
-This, even more than the shortcut management boosts productivity to the next level.
+Coming soon - filter to vscode workspaces. 
 
 
-
-
-
-## filtering
-
-There are two ways of filtering the directories commands act on.
-Allowables and workspaces.
-
-### allowables
-An allowable is a file/directory that must be in the target directory for it to be allowed to execute.
-For example 99% of git commands you only run in git initialised folder.
-
-The exceptions are general utilitites/remote actions/creational commands.
-l (ls -1 --color ) is a general utility.
-g is general, for example g clone
-gh commands are mostly remote.
-
-
-
-### Vscode Workspaces
-
-This feature allows all ki commands to be fitlered to an active vscode workspace. 
-kiwi wsfile - workspace incept a workspace file.
-kiwix  - removes filtering for active ws file.
-
-Try keeping your workspaces in the kish workspaces folder. Can be very useful for 
-complex features across many diretories / files. Try naming by feature &/ issue number.
-
-### Structure
-Ki Sh is organised into two repos ki-core and kish. This is so you can save your aliases in your own
-repo, and also have semantic versioning separation from the core code, and update the core as you need.
-I took this approach over something like Oh My Zsh to give the user more control, and not have 
-thousands of shortcut codes you may never need or want. Basicly more signal less noise. It also
-makes it vialbe to share youe repo across your organisation, and may even be useful for advanced scenarios like
-multi-repo deployments.
 

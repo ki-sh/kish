@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # source "$HOME/ocal.lib.sh"
-source "/Users/henrykemp/.kish/ocal.lib.sh"
+source "$HOME/.kish/ocal.lib.sh"
 source "$HOME/.kish/lib/klog.sh"
 
- st="ocal"
- cmd="google calendar event fast"
-if [ $# -eq 0 ] || [ "$1" = '-h' ]; then  
+st="ocal"
+cmd="google calendar event fast"
+if [ $# -eq 0 ] || [ "$1" = '-h' ]; then
     echo "                  *******************************************"
-    echo "                  *   ocal - lightning fast event creation. *"  
+    echo "                  *   ocal - lightning fast event creation. *"
     echo "                  *******************************************"
     echo
     echo "  Intro: ocal is designed to be most human, intuitive, minimal way of entering events with dates/times/durations/ranges."
@@ -20,7 +20,7 @@ if [ $# -eq 0 ] || [ "$1" = '-h' ]; then
     echo " + for a duration. duration uses the same date - time format as above."
     echo
     echo "  The datetime goes after the title eg: ocal my event title 25/12"
-    echo " ocal will open default web browser with (currently google calendar) with the title, dates/times/duration/all day set."  
+    echo " ocal will open default web browser with (currently google calendar) with the title, dates/times/duration/all day set."
     echo " Customise/tweek event from there. Waaaay faster than clicking about with a mouse in the web page :)"
     echo " So dive in and have a play - try this first: "
     echo " ocal Open Christmas presents, all 50 25/12-0945-1038 "
@@ -39,7 +39,7 @@ if [ $# -eq 0 ] || [ "$1" = '-h' ]; then
     echo "  01/01/2111-1111          # title is optional      "
     echo "  title only               # datespec is optional    "
     echo "  $> ocal - h   or just $> ocal     - shows this help and calendar"
-   
+
     # echo
     # echo "  ocal whatever title you want.                # no datetime. No need to surround title with quotes"
     # echo "  ocal 27/12                                    # just a date/time title not required"
@@ -58,8 +58,8 @@ if [ $# -eq 0 ] || [ "$1" = '-h' ]; then
     cal -A 2
 else
     # turn off logging
-    log_info () { 
-        return 0 
+    log_info() {
+        return 0
     }
     res=$(gcal "$@")
     open "$res"

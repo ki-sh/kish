@@ -22,6 +22,8 @@ if [ "$1" = '-h' ] || [ $# = 0 ]; then
     echo '   ------------------------------------------------'
     cat "$HOME/.kish/lib/generatedhelp.txt" | tr -d '"' | tr -d "'"
     echo ''
+    echo " Love Ki? Become a sponsor: ${GREEN}https://buymeacoffee.com/henryGuy thx!"
+    echo ''
 # cat "$HOME/.kish/lib/ki-spread.help.txt"
 
 # read -p "more..." </dev/tty
@@ -37,3 +39,4 @@ else
     klog "$cmd $*"
 
 fi
+
