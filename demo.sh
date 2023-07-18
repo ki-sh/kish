@@ -1,3 +1,6 @@
+Welcome to Ki sh.
+to get started make your own repo from kish template: 
+https://github.com/ki-sh/kish
 git clone https://github.com/ki-sh/kish.git
 # better - use template, then clone own controlled repo.
 cd kish
@@ -34,12 +37,12 @@ gpu apps/* packages/*
 ki cat apps/w*/package.json
 # say you'd like to add cat as an alias:
 kin
-#at options enter: catty, cat, y. 
+#at options enter: kat, cat, y. 
 kiu #update the aliases
 # start a new terminal.
 ki #see your alias is added to the help.
 # ready to use:
-catty apps/w*/package.json
+kat apps/w*/package.json
 
 # enjoy.
 # we hope you find ki super useful - like how did we live without this before useful :)
