@@ -4,7 +4,7 @@ source "$HOME/.kish/lib/klog.sh"
 source "$HOME/.kish/lib/colors.sh"
 
 st="gca"
-cmd="git commit  -a --amend --no-edit"
+cmd="git commit --amend --no-edit"
 applicable=".git"
 
 [ "$1" = '-h' ] &&

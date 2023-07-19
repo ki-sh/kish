@@ -8,6 +8,7 @@
      gca         :      "git commit -a --amend --no-edit" 
      gco         :      "git checkout " 
      gcob        :      "git checkout -b " 
+     gf          :      'git fetch --prune origin' 
      gm          :      'git merge' 
      gp          :      "git push" 
      gpu         :      "git push --set-upstream origin " 
@@ -23,10 +24,11 @@
 
     [k]...
      kdry        :      "see dry run output for any ki-spread command. " cmd 
-     ki          :      "show this generated help / kipower any command. " cmd 
+     ki          :      "show this generated help / kipower any command. " 
      kin         :      "new ki command " 
      kit         :      "ki minimalist test runner " cmd 
      kiu         :      "update ki commands " 
+     kix         :      "removes a ki alias command " 
      klog        :      "log of all ki commands ran. " 
 
     [l]...

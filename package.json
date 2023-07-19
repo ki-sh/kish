@@ -37,9 +37,9 @@
   "author": "Hennry Kemp",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ticaboo/kish/issues"
+    "url": "https://github.com/ki-sh/kish/issues"
   },
-  "homepage": "https://github.com/ticaboo/kish#readme",
+  "homepage": "https://github.com/ki-sh/kish#readme",
   "dependencies": {
     "kishcore": "^1.0.0"
   }
