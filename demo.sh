@@ -1,14 +1,14 @@
-Welcome to Ki sh.
-to get started make your own repo from kish template: 
-https://github.com/ki-sh/kish
+PS1="$> "
+# Welcome to Ki sh.
+# to get started make your own repo from kish template: https://github.com/ki-sh/kish
+# and clone it to your device:
 git clone https://github.com/ki-sh/kish.git
-# better - use template, then clone own controlled repo.
 cd kish
 npm i
 npm run kiu
 # start a new terminal
 ki
-# get the demo poly repo
+# to start, getthe demonstration poly repo:
 cd .. # come out of kish
 git clone https://github.com/ki-sh/poly-ex.git
 # here we go - no cd poly_ex, cd .. after. good riddance cd!

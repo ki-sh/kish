@@ -5,7 +5,7 @@
      ga          :      "git add -v " 
      gb          :      "git branch " 
      gc          :      "git commit -m " 
-     gca         :      "git commit -a --amend --no-edit" 
+     gca         :      "git commit --amend --no-edit" 
      gco         :      "git checkout " 
      gcob        :      "git checkout -b " 
      gf          :      'git fetch --prune origin' 
