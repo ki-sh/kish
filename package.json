@@ -9,7 +9,7 @@
   "scripts": {
     "test": "$HOME/.kish/kit.sh aliases",
     "uninstall": "rm -rf ~/.kish",
-    "kiu": "./node_modules/kishcore/src/install.sh"
+    "kiu": "./node_modules/kishcore/src/install.sh local"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,6 @@
   },
   "homepage": "https://github.com/ki-sh/kish#readme",
   "dependencies": {
-    "kishcore": "^1.0.0"
+    "kishcore": "^1.0.3"
   }
 }
