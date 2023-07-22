@@ -8,8 +8,10 @@ npm i
 npm run kiu
 # start a new terminal
 ki
-# to start, getthe demonstration poly repo:
 cd .. # come out of kish
+
+
+# to start, getthe demonstration poly repo:
 git clone https://github.com/ki-sh/poly-ex.git
 # here we go - no cd poly_ex, cd .. after. good riddance cd!
 nr poly-ex clone:all
