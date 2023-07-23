@@ -37,6 +37,7 @@
     [n]...
      n           :      "npm " 
      nr          :      "npm run" 
+     nup         :      'npm-check-updates' 
 
     [o]...
      o           :      "least typing browsing ever" 

@@ -28,6 +28,7 @@ alias klog=$HOME/.kish/klog.sh
 alias l=$HOME/.kish/l.sh
 alias n=$HOME/.kish/n.sh
 alias nr=$HOME/.kish/nr.sh
+alias nup=$HOME/.kish/nup.sh
 alias o=$HOME/.kish/o.sh
 alias ocal=$HOME/.kish/ocal.sh
 alias ochess=$HOME/.kish/ochess.sh

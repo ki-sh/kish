@@ -4,7 +4,7 @@
 * Easily create/customise/manage command line shortcut alaises, scripts.
 * Never have to type cd, or its evil twin cd .. again!
 * Never loose your shell aliases/easily share between devices/teams. Save in your own repo (from <a href=https://github.com/ki-sh/kish >Template</a>)
-* KIT is an included test lib with which you can x-tests, only-tests. No DSL, simple to understand simple to use. It is an alternative to Bats shell testing when you want something simple and quick.
+* Auto generated help page of your aliases (ki). Easily control your Aliases, unlike 'oh my zsh' which by default innundates with far too many.
 
 
 ```
@@ -30,11 +30,12 @@
 ```
 
 
-* Zero dependencies. Simple to use shell test framework (KIT)
+* Zero dependencies. Simple to use shell test framework (KIT).Provides x-tests, only-tests, no DSL. It is an alternative to Bats shell script testing when you want something no setup, simple quick and easy to use.
 * Ubiqutous v3 portable pure shell script.
 * Comes with useful example scripts:
   * ocal : fast easy human cli for creating calendar events.
   * omap : open maps with location or directions
+  * and so much more.
 
 
 ## Install
@@ -185,5 +186,7 @@ But its more than just about saving keystrokes. The long commands cause mental i
 
 Coming soon - filter to vscode workspaces. 
 
-
+## common questions
+* if you move kish, simply update the KISHPATH in your shell profile (eg $HOME/.zshrc / $HOME/.bashrc)
+* to check for updates, and keep up to date with kish core features, you can use ```$> nup kish```.
 
