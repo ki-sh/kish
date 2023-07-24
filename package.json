@@ -41,6 +41,6 @@
   },
   "homepage": "https://github.com/ki-sh/kish#readme",
   "dependencies": {
-    "kishcore": "^1.11.38"
+    "kishcore": "^1.15.38"
   }
 }
