@@ -1,6 +1,6 @@
 {
   "name": "kish",
-  "version": "1.1.0",
+  "version": "1.11.0",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -41,6 +41,6 @@
   },
   "homepage": "https://github.com/ki-sh/kish#readme",
   "dependencies": {
-    "kishcore": "^1.15.38"
+    "kishcore": "^1.14.38"
   }
 }
