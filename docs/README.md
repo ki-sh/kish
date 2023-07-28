@@ -97,7 +97,11 @@ They bubble up from subdirectories until they find the configuration.
 
 Ki works with this so you can stay in any directory - usually an outer higher level one. This is typical of working with mono-repos. Any ki commands take care of navigating into the desired directories.
 
-[ video ]
+
+
+https://github.com/ki-sh/kish/assets/114587432/2eb2ca4b-d2ef-4532-b514-2c81f08110d1
+
+
 
 Follow allong these steps to replicate the actions shownn in the video:
 
