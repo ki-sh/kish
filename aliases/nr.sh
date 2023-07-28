@@ -5,7 +5,7 @@ source "$HOME/.kish/lib/colors.sh"
 
 st="nr"
 cmd="npm run"
-applicable="package.json"
+# applicable="package.json"
 
 [ "$1" = '-h' ] &&
     echo "n ( $cmd ) shortcut script ~/.kish/n.sh" &&

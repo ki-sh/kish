@@ -279,7 +279,7 @@ function datefmt() {
     t=$(rpad "$t" "4")
     local T='T'
     # AT: if $t -eq '0000'
-    if [[ $t -eq '0000' ]]; then
+    if [ "$t" -eq '0000' ]; then
         echo "$y$m$d"
     else
         seconds="00"

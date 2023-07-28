@@ -3,8 +3,8 @@ source "$HOME/.kish/lib/ki-spread.sh"
 source "$HOME/.kish/lib/klog.sh"
 source "$HOME/.kish/lib/colors.sh"
 
-st='nup checks npm package dependencies'
-cmd='npm-check-updates'
+st='vta: volta - modern (2023) node version mgmt.'
+cmd='volta'
 
 if [ "$1" = -h ]; then
     "$command_name ( $command_execute)"
@@ -13,18 +13,18 @@ fi
 
 # check if  npm install -g npm-check-updates installed,
 # ask if want to install it if not.
-if ! command -v npm-check-updates &>/dev/null; then
-    echo "npm-check-updates  could not be found"
-    echo "install npm-check-updates (npm i -g npm-check-updates ) y/n?"
+if ! command -v volta &>/dev/null; then
+    echo "volta could not be found"
+    echo "install volta (curl https://get.volta.sh | bash ) y/n?"
     read -r install_npm
     if [ "$install_npm" == 'y' ] || [ "$install_npm" == 'Y' ]; then
-        npm i -g npm-check-updates
-        echo "installed npm-check-updates"
+        curl https://get.volta.sh | bash
+        echo "volta should be installed now. try v again."
     else
         exit
     fi
 fi
 
 ki-spread "$@"
-echo "You can ignore 'ncu -u' suggestion and use 'y upgrade-interactive dir(s)'. or n, pn etc'"
+# echo ""
 klog "$cmd $*"

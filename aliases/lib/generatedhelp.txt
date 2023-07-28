@@ -24,6 +24,7 @@
 
     [k]...
      kdry        :      "see dry run output for any ki-spread command. " cmd 
+     kgrep       :      'kgrep recursivly search: dir string ' cmd 
      ki          :      "show this generated help / kipower any command. " 
      kin         :      "new ki command " 
      kit         :      "ki minimalist test runner " cmd 
@@ -49,5 +50,10 @@
      pn          :      "pnpm" 
      pnr         :      "pnpm run" 
 
+    [v]...
+     vta         :      'volta' 
+     vte         :      'npm init vite' 
+
     [y]...
      y           :      "yarn" 
+     yr          :      "yarn run" 

@@ -37,20 +37,21 @@ Whi='\x1B[0;37m';     BWhi='\x1B[1;37m';    UWhi='\x1B[4;37m';    IWhi='\x1B[0;9
 
 prompt="${Blu}${Gre}$ ${IYel}${Whi}"
 
-function fakeprompt() {
+fakeprompt() {
     # echo ''
-    printf "$prompt"
-    # sleep 0.2
+    # printf "%s" "$prompt"
+     PS1="$> "
+     sleep 0.01
 }
 
-function fakewaitenter() {
+fakewaitenter() {
     fakeprompt
-    read -p "" </dev/tty
+    read -r "" </dev/tty
 }
-function fakewaitenternewline() {
+fakewaitenternewline() {
     echo
     fakeprompt
-    read -p "" </dev/tty
+    read -r "" </dev/tty
 }
 
 
@@ -60,16 +61,16 @@ cls() {
     sleep 0.8
 }
 
-function startdemo() {
+startdemo() {
     clear
     fakeprompt
-    read -p "" </dev/tty
+    read -r "" </dev/tty
 }
 
-function enddemo() {
+enddemo() {
     fakewaitenter
 }
-function typeitclear(){
+typeitclear(){
  clear
  typeit "$@"
 }
@@ -79,7 +80,7 @@ simpaste() {
    printf "%s" "$1"
 }
 
-function typeit(){
+typeit(){
     word="$1"
     # fast human speed:
     #  delays=(0.13 0.063 0.057 0.041 0.026 0.012 1.23 0.011 0.029 0.1 0.1 0.05 0.03 0.06 0.09 0.045 0.03 0.06 0.08 0.03 )
@@ -136,8 +137,9 @@ yarnprogbar() {
 setup() {
     mkdir demo_temp
     cd "demo_temp"
+    PS1="$> "
     cls
-    sleep 2
+    sleep 1
 }
 
 teardown() {
@@ -146,22 +148,29 @@ teardown() {
 
 demo() {
 
-    cls
-    fake "ki"
-    sleep 3
-    cls
+    # cls
+    # typeit "# to start with have ki installed"
+    # fake "ki"
+    # sleep 2
+    # cls
+     cat "$HOME/.kish/lib/ascii.txt"
+     typeit "### ki demo with polyrepo scenario ###"
+     sleep 3
 
+    cls
     typeit "# Lets grab the demonstration poly repo:"
     fake "git clone https://github.com/ki-sh/poly-ex.git"
-    sleep 2
+    sleep 1
+
+    # cls
+    # typeit "and quiclky 'l' just to make sure its there!"
+    # fake "l"
 
     cls
-    typeit "and quiclky 'l' just to make sure its there!"
-    fake "l"
-
-    cls
-    typeit "# here we go - no cd poly_ex, cd .. after. good riddance cd!"
-    fake "nr poly-ex clone:all"
+    typeit "# Lets clone all the repos for frontend dev. "
+    typeit "# note- no cd poly_ex; npm run clone:frontend; cd .. "
+    fake "nr poly-ex clone:frontend"
+    
 
     cls
     typeit "# we now have multiple repos cloned to apps/ and packages/. Take a look:"
@@ -169,37 +178,56 @@ demo() {
     sleep 1
 
     cls
-    typeit "# lets checkout a new branch called 'setup' on them all:"
-    fake "gcob setup  apps/* packages/*"
-    sleep 0.75
-
-    cls
-    typeit "# and lets see the new branch has been created:"
-    fake "gb apps/* packages/*"
+    typeit "# Setup yarn workspaces:"
+    fake "nr poly-ex hoist:workspace"
+    typeit "# yarn workspace ready"
     sleep 0.6
 
+    typeit "# And lets get all the dependencies for all the repos:"
+    fake "y install"
+    sleep 1
+
+ 
     cls
-    typeit "# say we want each of them to have npm package:"
-    fake "n init -y apps/* packages/*"
-    sleep 0.45
+    typeit "# lets checkout a new branch called 'demo-branch' on them all:"
+    fake "gcob demo-branch  apps/* packages/*"
+    sleep 0.75
+
+    # cls
+    # typeit "# just to show new branch has been created and switched to:"
+    # fake "gb apps/* packages/*"
+    # sleep 0.6
+
+    # cls
+    # typeit "# say we want each of them to have npm package:"
+    # fake "n init -y apps/* packages/*"
+    # sleep 0.45
 
     cls
     typeit "# say you wanted to run all the tests in all the repos in one go:"
+    typeit "# Note they all have the default 'test' action - 'no tests specified', so errors expectedly."
     fake "nr apps/* packages/* test"
     sleep 0.35
-    typeit "# as expected, the default 'test' action - 'no tests specified' is run on all the targets."
+    
 
     cls
     typeit "# lets do some source control..."
+    typeit "# add a newfile to all of the projects:"
+    fake "ki touch apps/* packages/* newfile.txt"
+    
+    cls
     typeit "# you can git add files:"
-    fake "ga apps/w*/package.json"
+    fake "ga apps/w*/newfile.txt"
+    fake "gs apps/*"
+    sleep 1
 
     cls
     typeit "# or add whole directories (and their sub dirs):"
     fake "ga apps/* packages/*"
+    sleep 0.85
 
     cls
-    typeit "#let's check git status added what we expected:"
+    typeit "# let's check git status added what we expected:"
     fake "gs apps/* packages/*"
 
     cls
@@ -207,15 +235,24 @@ demo() {
     fake "gc 'npm initialised' apps/* packages/*"
 
     cls
-    typeit "# you wont have access to push since this is a demo and was checked out with http,"
-    typeit " but if you did have remote access ,can simply gpu dirs to push:"
+    # typeit "# you wont have access to push since this is a demo,"
+    # typeit " but if you did have remote access ,can simply gpu dirs to push:"
+    typeit "pushing multiple repos is a cinch too: (as is merging, pulling etc)"
     typeit "gpu apps/* packages/*"
+
+
+    cls
+    typeit "# Lastly lets build and spin up all the servers "
+    fake "chmod +x poly-ex/dev.sh "
+    fake "./poly-ex/dev.sh"
+    sleep 1
 
     cls
     typeit "# Weve just scratched the surface with this intro demo."
     typeit "# We hope you get an idea of how powerful and easy ki is. hf && enjoy!"
     sleep 3
     cls
+
 }
 
 teardown
